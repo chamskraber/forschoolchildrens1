@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Hover Effect</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 80%;
+        }
+        .box {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .box:hover {
+            transform: scale(1.1);
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        .box a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" style="background-image: url(telavi1.webp);">
+            <a href="https://georgia.travel/ka/%E1%83%A5%E1%83%90%E1%83%9A%E1%83%90%E1%83%A5%E1%83%94%E1%83%91%E1%83%98/%E1%83%97%E1%83%94%E1%83%9A%E1%83%90%E1%83%95%E1%83%98"></a><span>თელავი</span>
+        </div>
+        <div class="box" style="background-image: url(Tbilisi-1.jpg);">
+            <a href="https://georgia.travel/ka/%E1%83%A5%E1%83%90%E1%83%9A%E1%83%90%E1%83%A5%E1%83%94%E1%83%91%E1%83%98/%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98"></a><span>თბილისი</span>
+        </div>
+        <div class="box" style="background-image: url(sighnaghi3.jpg);">
+            <a href="https://georgia.travel/ka/%E1%83%A5%E1%83%90%E1%83%9A%E1%83%90%E1%83%A5%E1%83%94%E1%83%91%E1%83%98/%E1%83%A1%E1%83%98%E1%83%A6%E1%83%9C%E1%83%90%E1%83%A6%E1%83%98"></a><span>სიღნაღი</span>
+        </div>
+        <div class="box" style="background-image: url(mcxeTa.jpg);">
+            <a href="https://georgia.travel/ka/%E1%83%A5%E1%83%90%E1%83%9A%E1%83%90%E1%83%A5%E1%83%94%E1%83%91%E1%83%98/%E1%83%9B%E1%83%AA%E1%83%AE%E1%83%94%E1%83%97%E1%83%90"></a><span>მცხეთა</span>
+        </div>
+        <div class="box" style="background-image: url(goti1.webp);">
+            <a href="https://georgia.travel/ka/%E1%83%A5%E1%83%90%E1%83%9A%E1%83%90%E1%83%A5%E1%83%94%E1%83%91%E1%83%98/%E1%83%92%E1%83%9D%E1%83%A0%E1%83%98"></a><span>გორო</span>
+        </div>
+        <div class="box" style="background-image: url(lagodexi.jpg);">
+            <a href="https://georgia.travel/ka/%E1%83%A5%E1%83%90%E1%83%9A%E1%83%90%E1%83%A5%E1%83%94%E1%83%91%E1%83%98/%E1%83%9A%E1%83%90%E1%83%92%E1%83%9D%E1%83%93%E1%83%94%E1%83%AE%E1%83%98"></a><span>ლაგოდეხი </span>
+        </div>
+    </div>
+</body>
+</html>

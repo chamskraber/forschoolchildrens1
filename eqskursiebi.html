@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Hover Effect</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            width: 80%;
+        }
+        .box {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            background-color: #0077b6;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        .box:hover {
+            transform: scale(1.1);
+            background-color: #ff6700;
+        }
+        .box a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"><a href="https://georgia.tra">ბმული 1</a>ფანჯარა 2</div>
+        <div class="box"><a href="https://example.com">ბმული 2</a>ფანჯარა 2</div>
+        <div class="box"><a href="https://example.com">ბმული 3</a>ფანჯარა 3</div>
+        <div class="box"><a href="https://example.com">ბმული 4</a>ფანჯარა 4</div>
+        <div class="box"><a href="https://example.com">ბმული 5</a>ფანჯარა 5</div>
+        <div class="box"><a href="https://example.com">ბმული 6</a>ფანჯარა 6</div>
+    </div>
+</body>
+</html>

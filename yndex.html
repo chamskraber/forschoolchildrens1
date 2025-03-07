@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ექვსი ფანჯარა</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 300px); /* ფანჯრების ზომა გაზრდილია */
+            grid-gap: 20px;
+        }
+
+        .window {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .window:hover {
+            transform: scale(1.05);
+        }
+
+        .window-content {
+            height: 200px; /* ფოტოს სიმაღლე */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .window-text {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-top: 1px solid #ddd;
+            box-sizing: border-box;
+            resize: vertical;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+     <a href="Teater.html"></a>
+    <div class="container">
+        <div class="window" data-link="teater.html">
+            <div class="window-content" style="background-image: url(teater.jpg);"></div>
+            <h2>თეატრი</h2>
+            
+        </div>
+        <div class="window" data-link="https://www.example.com/2">
+            <div class="window-content" style="background-image: url(kino.jpg);"></div>
+            <h2>კინო</h2>
+        </div>
+        <div class="window" data-link="https://www.example.com/3">
+            <div class="window-content" style="background-image: url(muzeumi.jpg);"></div>
+            <h2>მუზეუმები</h2>
+        </div>
+        <div class="window" data-link="https://www.example.com/4">
+            <div class="window-content" style="background-image: url(eqskursia.jpg);"></div>
+            <h2>ექსკურსია</h2>
+        </div>
+        <div class="window" data-link="https://www.example.com/5">
+            <div class="window-content" style="background-image: url(gasartobi.jpg);"></div>
+            <h2>გასართობი ცენტრები</h2>
+        </div>
+        <div class="window" data-link="https://www.example.com/6">
+            <div class="window-content" style="background-image: url(kartingi.jpg);"></div>
+            <h2>კარტინგები</h2>
+        </div>
+    </div>
+    <script>
+        const windows = document.querySelectorAll('.window');
+
+        windows.forEach(window => {
+            window.addEventListener('click', () => {
+                const link = window.getAttribute('data-link');
+                window.open(link, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

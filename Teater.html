@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>სისხლიანი ქორწილი</title>
+    <style>
+        body {
+            background-color: #d31313;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            border: 10px solid rgb(214, 56, 16);
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1000px; /* შემცირებული მაქსიმალური სიგანე */
+            background-color: rgb(202, 16, 16);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .container::before,
+        .container::after {
+            content: "";
+            position: absolute;
+            top: -20px;
+            width: 50%;
+            height: 40px;
+            background: linear-gradient(to bottom, rgb(224, 9, 9), rgb(148, 4, 4));
+            z-index: -1;
+        }
+
+        .container::before {
+            left: 0;
+            transform: skewY(-5deg);
+            border-bottom-right-radius: 20px;
+        }
+
+        .container::after {
+            right: 0;
+            transform: skewY(5deg);
+            border-bottom-left-radius: 20px;
+        }
+
+        .event-box {
+            width: 280px; /* შემცირებული სიგანე */
+            height: 400px; /* გაზრდილი სიგრძე */
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .event-box:hover {
+            transform: scale(1.05);
+        }
+
+        .event-box img {
+            width: 100%;
+            height: 70%; /* სურათის სიმაღლე */
+            object-fit: cover; /* სურათის გაჭიმვა/შეკუმშვა */
+            display: block;
+        }
+
+        .event-title {
+            background-color: rgba(17, 7, 7, 0.8);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            margin: 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .event-box a {
+            text-decoration: none;
+            display: block;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            padding: 10px;
+            background-color: #0eb5e7;
+            color: white;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="event-box">
+            <a href="linkjerdaixocnen.html">
+                <img src="jerdaixocnen1.jpg" alt="ჯერ დაიხოცნენ მერე იქორწინეს">
+                <div class="event-title">ჯერ დაიხოცნენ მერე იქორწინეს</div>
+            </a>
+        </div>
+        <div class="event-box">
+            <a href="linkeWvi.html">
+                <img src="eWvi.jpg" alt="ეჭვი">
+                <div class="event-title">ეჭვი</div>
+            </a>
+        </div>
+        <div class="event-box">
+            <a href="linkwitelquda.html">
+                <img src="wit.webp" alt="წითელქუდა">
+                <div class="event-title">წითელქუდა</div>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 სისხლიანი ქორწილი</p>
+    </footer>
+</body>
+</html>

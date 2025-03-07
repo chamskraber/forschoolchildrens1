@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჯერ დაიხოცნენ, მერე იქორწინეს - სპექტაკლი</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> ჯერ დაიხოცნენ, მერე იქორწინეს </h1>
+            <p> ულამაზესი კოსტუმირებული მუსიკალური დადგმა </p>
+        </header>
+        <section class="poster">
+            <img src="jerafiSa.webp" alt="სპექტაკლის აფიშა" style="width: 500px;;" height="300px">
+        </section>
+        <section class="info">
+            <h2> სახალხო თეატრი №1 </h2>
+            <p> რეჟისორი: ჯიაზო ჯობავა </p>
+            <p> ჟანრი: ვოდევილი </p>
+            <p>⏳ ხანგრძლივობა: 1:10 წუთი ⏳</p>
+            <p> ასაკობრივი შეზღუდვა: 9+ </p>
+        </section>
+        <section class="description">
+            <h2> სპექტაკლის შესახებ </h2>
+            <p>✨ სპექტაკლი "ჯერ დაიხოცნენ, მერე იქორწინეს" არის რაფიელ ერისთავის პოპულარული ვოდევილი, რომელიც მოგვითხრობს სასაცილო და ჩახლართულ სიტუაციებზე, რომლებიც წარმოიქმნება ქორწინების გარშემო. პერსონაჟები ხშირად ხვდებიან კომიკურ და მოულოდნელ სიტუაციებში, რაც იწვევს სიცილს და გართობას. </p>
+            <p> ეს არის ულამაზესი კოსტუმირებული მუსიკალური დადგმა, რომელიც გაახარებს ყველა თაობის მაყურებელს! </p>
+        </section>
+        <section class="tickets">
+            <h2> ️ ბილეთის ფასი ️</h2>
+            <p> ბილეთის ფასი: 20 ლარი. შესაძენად დაგვიკავშირდით: <a href="tel:+995555488150">+995 555 488 150</a> </p>
+            <p id="phone-number" style="display: none;">+995 555 488 150</p>
+            <button id="copy-button">ტელეფონის ნომრის კოპირება</button>
+        </section>
+    </div>
+    <script>
+        document.getElementById('copy-button').addEventListener('click', function() {
+            var phoneNumber = document.getElementById('phone-number').textContent;
+            navigator.clipboard.writeText(phoneNumber).then(function() {
+                alert('ტელეფონის ნომერი დაკოპირებულია!');
+            }, function(err) {
+                console.error('კოპირება ვერ მოხერხდა: ', err);
+            });
+        });
+    </script>
+</body>
+</html>
